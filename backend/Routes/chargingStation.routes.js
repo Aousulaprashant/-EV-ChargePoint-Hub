@@ -11,7 +11,7 @@ const { protect } = require("../middlewares/auth.middleware.js");
 const router = express.Router();
 
 router.post("/", Authmiddleware, createCharger);
-router.get("/", getChargers);
+router.get("/", Authmiddleware, getChargers);
 router.put("/:id", Authmiddleware, updateCharger);
 router.delete("/:id", Authmiddleware, deleteCharger);
 
