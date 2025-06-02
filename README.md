@@ -86,8 +86,8 @@ charging-stations-app/
 
 ## 🚀 Live Demo
 
-* 🔗 **Frontend**: [https://your-frontend-url.com](https://your-frontend-url.com)
-* 🔗 **Backend**: [https://your-backend-url.com/api](https://your-backend-url.com/api)
+* 🔗 **Frontend**: [frontEnd Deployed Url](https://ev-charge-point-hub-h46m.vercel.app/)
+* 🔗 **Backend**: [BackEnd Deployed Url](https://ev-charge-point-hub.vercel.app/)
 * 📄 **API Docs / Postman**: \[Link to collection]
 
 ---
