@@ -1,0 +1,162 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #49336eec;; /* dark blue */
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  font-family: "Poppins", sans-serif;;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .AddEv{
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+}
+.navbar .AddEv .Ev{
+  display: flex;
+  justify-self: center;
+
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #cbbce5ce;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease
+}
+
+.nav-link:hover {
+  color: #fefdffce;
+  transform: scale(1.1)
+}
+
+.btn-logout {
+  background-color: #e63946; /* red */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b3242d;
+}
+.btn-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #d9363e;
+}
+
+.btn-logout svg {
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .btn-logout {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .btn-logout svg {
+    font-size: 14px;
+  }
+}
+.LogoDash{
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+.LogoDash img{
+  width: 90px;
+  height: 90px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .LogoDash {
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .LogoDash img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .LogoDash h2 {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .btn-logout {
+    align-self: flex-start;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .LogoDash h2 {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .btn-logout {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .btn-logout svg {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,380 @@
+/* src/styles/ChargerList.css 
+
+
+
+.charger-list-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 8px;
+}
+
+.no-chargers {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.charger-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+.charger-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.15s ease;
+}
+
+.charger-item:hover {
+  background-color: #f1f5f9;
+}
+
+.charger-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.charger-name {
+  font-weight: 600;
+  color: #333;
+  min-width: 150px;
+}
+
+.charger-status {
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+  min-width: 80px;
+  text-align: center;
+}
+
+.status-active {
+  background-color: #28a745; /* green 
+}
+
+.status-inactive {
+  background-color: #dc3545; /* red 
+}
+
+.charger-connector {
+  font-style: italic;
+  color: #555;
+  min-width: 120px;
+}
+
+.charger-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}
+*/
+/* chargerList.css */
+
+.charger-list-page {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  
+  font-family: "Poppins", sans-serif;;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  color: #49336eec;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.no-chargers {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+}
+
+.charger-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.charger-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #49336eec;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.charger-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.charger-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.charger-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #49336eec;
+}
+
+.charger-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status-available {
+  background-color: #e0f9ec;
+  color: #0a8e4f;
+  border: 1px solid #0a8e4f;
+}
+
+.status-busy {
+  background-color: #fff3f3;
+  color: #c92a2a;
+  border: 1px solid #c92a2a;
+}
+
+.status-maintenance {
+  background-color: #fff7e6;
+  color: #f59f00;
+  border: 1px solid #f59f00;
+}
+
+.charger-connector {
+  font-size: 15px;
+  color: #666;
+}
+
+.charger-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-edit {
+  background-color: #49336eec;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #3a265e;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+.iconEV{
+  width: 40px;
+  height: 40px;
+}
+.page-title{
+  display: flex;
+  gap: 20px;
+}
+.charger-status {
+  font-weight: bold;
+  /* add common styles if needed */
+}
+
+.status-active {
+  color: green;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-inactive {
+  color: red;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 40px 16px;
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .charger-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .charger-info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .charger-name {
+    font-size: 18px;
+  }
+
+  .charger-connector {
+    font-size: 14px;
+  }
+
+  .charger-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 48%;
+    text-align: center;
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .iconEV {
+    width: 30px;
+    height: 30px;
+  }
+
+  .charger-status {
+    font-size: 13px;
+  }
+
+  .status-icon {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .charger-name {
+    font-size: 16px;
+  }
+
+  .charger-connector {
+    font-size: 13px;
+  }
+
+  .iconEV {
+    width: 26px;
+    height: 26px;
+  }
+}
+

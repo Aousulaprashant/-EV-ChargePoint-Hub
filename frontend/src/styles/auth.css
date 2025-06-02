@@ -1,0 +1,181 @@
+.outterLogin {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+.outterLogin {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.outterLogin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../IMG/The Impact of EV Charging Infrastructure Expansion on Mass EV Adoption.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+.outterLogin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* This adds a dark overlay */
+  z-index: 1;
+}
+
+
+/* Your auth-container stays on top */
+.auth-container {
+  position: relative;
+  top: -100px;
+  height: 100vh;
+  max-width: 400px;
+  margin: 80px auto;
+  background:#3e2962;
+  padding: 30px;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;;
+  color: white;
+  -webkit-text-stroke: 1px rgb(205, 158, 226); /* This creates the stroke */
+  text-stroke: 7px rgb(253, 43, 43);
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px #49336ece solid ;
+  color: #fff;
+  background-color: #38285433;
+  border-radius: 5px;
+  
+}
+
+.auth-container button {
+  width: 180px;
+  padding: 10px;
+  margin-left: 120px;
+  background-color: #9578c6ce;;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.7s;
+}
+
+.auth-container button:hover {
+  background-color: #9c85c1ce;;
+  transform: scale(1.09);
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 15px;
+  color: #c9c7c784;
+}
+.auth-container a{
+  color: #866db2ce;
+}
+.auth-container a:hover{
+  color: #ae8ee6ce;
+}
+.login-header {
+  margin-bottom: 25px;
+}
+
+.login-header h2 {
+  color: #49336eec;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+
+.login-tagline {
+  font-size: 14px;
+  color: #555;
+}
+
+.login-icon {
+  width: 90px;
+  height: 90px;
+  color: #b8a2ddec;
+  display: flex;
+  justify-content: center;
+  margin-left: 130px;
+  margin-top: -60px;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    padding-right: 20px;
+  }
+
+  .auth-container button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .login-icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+  }
+
+  .auth-container input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .auth-container h2 {
+    font-size: 20px;
+  }
+
+  .login-header h2 {
+    font-size: 18px;
+  }
+
+  .login-tagline {
+    font-size: 12px;
+  }
+
+  .login-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: -20px;
+  }
+}

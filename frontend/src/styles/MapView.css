@@ -1,0 +1,61 @@
+/* MapView.css */
+
+.mapview-container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mapview-title {
+  text-align: center;
+  font-size: 28px;
+  color: #49336eec;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+.map-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  height: 70vh;
+  margin: 0 auto;
+  border: 2px solid #49336eec;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #49336eec;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-tip {
+  background: #49336eec;
+}
+.msg{
+  text-align: center;
+  font-weight: 600;
+  color: #ab4efccc;
+}
+.LogoDash{
+display: flex;
+}
+.LogoDash img{
+  width: 30px;
+  height: 30px;
+}
