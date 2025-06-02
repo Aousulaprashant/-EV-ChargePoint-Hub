@@ -14,7 +14,7 @@ app.use(cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/chargers", chargerRoutes);
 app.get("/", (req, res) => {
-  res.send("OK SETED");
+  res.send("Welcome to the backend server!");
 });
 // error handlers
 // app.use(notFound);
