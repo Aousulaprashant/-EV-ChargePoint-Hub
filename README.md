@@ -96,7 +96,7 @@ charging-stations-app/
 
 | Method | Endpoint           | Description             |
 | ------ | ------------------ | ----------------------- |
-| POST   | `/api/auth/signup` | Register a new user     |
+| POST   | `/api/auth/register` | Register a new user     |
 | POST   | `/api/auth/login`  | Login and receive token |
 
 ### ✅ JWT Usage
@@ -109,7 +109,7 @@ Authorization: Bearer <token>
 ```
 
 Protected Routes:
-
+* `GET /api/chargers`
 * `POST /api/chargers`
 * `PUT /api/chargers/:id`
 * `DELETE /api/chargers/:id`
@@ -197,7 +197,7 @@ GET /api/chargers?status=Active&powerOutput=22&connectorType=CCS
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/charging-stations-app.git
+git clone https://github.com/Aousulaprashant/-EV-ChargePoint-Hub/
 cd charging-stations-app
 ```
 
@@ -206,7 +206,8 @@ cd charging-stations-app
 ```bash
 cd backend
 npm install
-cp .env.example .env
+include the .env 
+
 ```
 
 Edit `.env`:
@@ -220,7 +221,7 @@ JWT_SECRET=your_jwt_secret_key
 Run the backend:
 
 ```bash
-npm start
+nodemon server.js
 # Runs on http://localhost:5000
 ```
 
@@ -262,7 +263,6 @@ npm start
 
 ## 📸 Screenshots
 
-> *(Place images in `/public` or `/README-assets/` and reference them here)*
 
 * Login Page
 * Charger List + Filters
@@ -273,9 +273,9 @@ npm start
 
 ## 👨‍💼 Author
 
-**Your Name**
-📧 [your.email@example.com](mailto:your.email@example.com)
-🔗 [LinkedIn](#) | [GitHub](#)
+**Aousula Prashanth**
+📧 [prashanthaousula@example.com](mailto:prashanthaousula@gmail.com)
+
 
 ---
 
