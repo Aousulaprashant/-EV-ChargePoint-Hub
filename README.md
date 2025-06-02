@@ -3,7 +3,7 @@
 A full-stack application built with **Node.js**, **Express**, **MongoDB**, and **React** that allows authenticated users to manage EV charging stations.
 
 ---
-
+## 🔗 **Live Demo**: [frontEnd Deployed Url](https://ev-charge-point-hub-h46m.vercel.app/)
 ## 🌟 Features
 
 * 🔐 JWT-based authentication (signup/login)
@@ -79,8 +79,8 @@ charging-stations-app/
 
 ### ☁️ Deployment
 
-* **Backend**: Render / Railway / Heroku
-* **Frontend**: Vercel / Netlify / Firebase Hosting
+* **Backend**: Vercel
+* **Frontend**: Vercel 
 
 ---
 
@@ -88,7 +88,6 @@ charging-stations-app/
 
 * 🔗 **Frontend**: [frontEnd Deployed Url](https://ev-charge-point-hub-h46m.vercel.app/)
 * 🔗 **Backend**: [BackEnd Deployed Url](https://ev-charge-point-hub.vercel.app/)
-* 📄 **API Docs / Postman**: \[Link to collection]
 
 ---
 
