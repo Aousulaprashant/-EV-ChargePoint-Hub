@@ -244,10 +244,22 @@
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
-
+.container-header{
+  display: flex;
+  justify-content: space-between;
+}
 .btn-edit {
   background-color: #49336eec;
   color: white;
+}
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.filters select {
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .btn-edit:hover {

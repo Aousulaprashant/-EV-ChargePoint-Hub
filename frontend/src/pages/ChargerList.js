@@ -20,14 +20,78 @@ export default function ChargerList() {
     }
   };
 
+  const [filters, setFilters] = useState({
+    status: "",
+    powerOutput: "",
+    connectorType: "",
+  });
+
+  useEffect(() => {
+    const fetchChargers = async () => {
+      const query = new URLSearchParams();
+
+      if (filters.status) query.append("status", filters.status);
+      if (filters.powerOutput) query.append("powerOutput", filters.powerOutput);
+      if (filters.connectorType)
+        query.append("connectorType", filters.connectorType);
+
+      const res = await axios.get(`/chargers?${query.toString()}`);
+      setChargers(res.data);
+    };
+
+    fetchChargers();
+  }, [filters]);
+
   return (
     <div className="charger-list-page">
       <Navbar />
       <div className="container">
-        <h2 className="page-title">
-          <img className="iconEV" src={imgH} alt="" />
-          <>Charging Stations</>
-        </h2>
+        <div className="container-header">
+          <h2 className="page-title">
+            <img className="iconEV" src={imgH} alt="" />
+            <>Charging Stations</>
+          </h2>
+          <div className="filters">
+            <select
+              value={filters.status}
+              onChange={(e) =>
+                setFilters({ ...filters, status: e.target.value })
+              }
+            >
+              <option value="">All Status</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+            <select
+              value={filters.powerOutput}
+              onChange={(e) =>
+                setFilters({ ...filters, powerOutput: e.target.value })
+              }
+            >
+              <option value="">All Power Outputs</option>
+              <option value="3.3">3.3 kW</option>
+              <option value="7.2">7.2 kW</option>
+              <option value="11">11 kW</option>
+              <option value="22">22 kW</option>
+              <option value="50">50 kW</option>
+              <option value="100">100 kW</option>
+            </select>
+            <select
+              value={filters.connectorType}
+              onChange={(e) =>
+                setFilters({ ...filters, connectorType: e.target.value })
+              }
+            >
+              <option value="">All Connectors</option>
+              <option value="Type1">Type1</option>
+              <option value="Type2">Type2</option>
+              <option value="CCS">CCS</option>
+              <option value="CHAdeMO">CHAdeMO</option>
+
+              <option value="GB/T">GB/T</option>
+            </select>
+          </div>
+        </div>
         {chargers.length === 0 ? (
           <p className="no-chargers">No charging stations available.</p>
         ) : (

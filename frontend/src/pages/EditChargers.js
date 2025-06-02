@@ -16,6 +16,9 @@ export default function AddEditCharger() {
     connectorType: "",
   });
 
+  const powerOptions = ["3.3", "7.2", "11", "22", "50", "100"]; // in kW
+  const connectorOptions = ["Type1", "Type2", "CHAdeMO", "CCS", "GB/T"];
+
   useEffect(() => {
     if (id) {
       axios.get("/chargers").then((res) => {
@@ -83,27 +86,38 @@ export default function AddEditCharger() {
             }
             required
           />
-          <input
-            className="input-field"
-            type="number"
-            placeholder="Power Output (kW)"
+          <select
+            className="select-field"
             value={charger.powerOutput}
             onChange={(e) =>
               setCharger({ ...charger, powerOutput: e.target.value })
             }
-            min="0"
             required
-          />
-          <input
-            className="input-field"
-            type="text"
-            placeholder="Connector Type"
+          >
+            <option value="">Select Power Output (kW)</option>
+            {powerOptions.map((p) => (
+              <option key={p} value={p}>
+                {p} kW
+              </option>
+            ))}
+          </select>
+
+          <select
+            className="select-field"
             value={charger.connectorType}
             onChange={(e) =>
               setCharger({ ...charger, connectorType: e.target.value })
             }
             required
-          />
+          >
+            <option value="">Select Connector Type</option>
+            {connectorOptions.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+
           <select
             className="select-field"
             value={charger.status}

@@ -35,8 +35,15 @@ const createCharger = async (req, res) => {
 
 const getChargers = async (req, res) => {
   try {
-    const filters = req.query;
-    const chargers = await ChargingStation.find(filters);
+    const { status, powerOutput, connectorType } = req.query;
+
+    let filter = {};
+
+    if (status) filter.status = status;
+    if (powerOutput) filter.powerOutput = Number(powerOutput);
+    if (connectorType) filter.connectorType = connectorType;
+
+    const chargers = await ChargingStation.find(filter);
     res.status(200).json(chargers);
   } catch (err) {
     console.error("Get Chargers Error:", err.message);
