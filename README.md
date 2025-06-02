@@ -1,7 +1,3 @@
-Here is your improved and properly formatted `README.md` for the **Charging Stations Management App**:
-
----
-
 # ⚡ Charging Stations Management App
 
 A full-stack application built with **Node.js**, **Express**, **MongoDB**, and **React** that allows authenticated users to manage EV charging stations.
